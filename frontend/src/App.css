@@ -1,0 +1,431 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #f3f2ef;
+  color: #000000e6;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0a66c2;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  color: #666;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #0a66c2;
+}
+
+.nav-user {
+  color: #000;
+  font-weight: 500;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #0a66c2;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #004182;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #0a66c2;
+  border: 1px solid #0a66c2;
+}
+
+.btn-logout {
+  background-color: transparent;
+  color: #666;
+  border: 1px solid #666;
+}
+
+.btn-logout:hover {
+  background-color: #f3f2ef;
+}
+
+.btn-block {
+  width: 100%;
+  padding: 12px;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px;
+}
+
+/* Auth Pages */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.auth-card {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08), 0 4px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-card h2 {
+  margin-bottom: 24px;
+  color: #000;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #000000e6;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #0a66c2;
+}
+
+.auth-link {
+  margin-top: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.auth-link a {
+  color: #0a66c2;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Feed Container */
+.feed-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Create Post */
+.create-post {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.create-post h3 {
+  margin-bottom: 12px;
+}
+
+.post-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.post-textarea:focus {
+  outline: none;
+  border-color: #0a66c2;
+}
+
+/* Post Card */
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.post-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.post-user-info h4 {
+  margin-bottom: 4px;
+  color: #000;
+}
+
+.post-time {
+  font-size: 12px;
+  color: #666;
+}
+
+.post-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.post-content {
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.edit-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edit-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.post-footer {
+  display: flex;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.btn-like, .btn-comment {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.btn-like:hover, .btn-comment:hover {
+  background-color: #f3f2ef;
+}
+
+.btn-like.liked {
+  color: #0a66c2;
+}
+
+/* Comments */
+.comments-section {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.comment-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.comment-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.comment {
+  background-color: #f3f2ef;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.comment strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #000;
+}
+
+.comment p {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.comment-time {
+  font-size: 11px;
+  color: #666;
+}
+
+/* Profile */
+.profile-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.profile-header {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.profile-info h2 {
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.profile-email {
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.profile-bio {
+  color: #000;
+  line-height: 1.5;
+}
+
+.edit-profile {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.profile-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-posts h3 {
+  margin-bottom: 12px;
+}
+
+/* Messages */
+.error-message {
+  background-color: #ff4444;
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .feed-container, .profile-container {
+    padding: 0 12px;
+  }
+
+  .auth-card {
+    padding: 24px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
